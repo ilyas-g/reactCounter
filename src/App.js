@@ -13,7 +13,11 @@ function App() {
       </button>
       <p>Counter: {counter}</p>
       <button className={`${counter === 10 ? "d-none" : ""}`}
-        onClick={() => { setCounter(counter + 1); }} >+</button>
+        onClick={() => { setCounter(counter + 1); }} >
+        +</button>
+      <br />
+      <br />
+      <button onClick={() => { setCounter(0); }}>Reset</button>
     </div >
   );
 }
