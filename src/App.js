@@ -18,14 +18,12 @@ function App() {
     text="-"
   />;
 
-  console.log("buttonMinus : " + buttonMinus);
   return (
     <div className="App">
       <div>
         {counter === 0 ? '' : buttonMinus}
         <p>Counter: {counter}</p>
         {counter === 10 ? '' : buttonPlus}
-        <br />
         <br />
         <Button
           counter={counter}
