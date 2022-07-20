@@ -1,14 +1,17 @@
 import React from 'react';
 
-export default function Button(props) {
-    console.log(props);
+export default function Button({ className, text, setCounter, counter }) {
     return (
-        <button className={props.className}
+        <button className={className}
             onClick={() => {
-                props.setCounter(props.counter + 1);
+                if (text === '+') {
+                    setCounter(counter + 1);
+                } else {
+                    setCounter(counter - 1);
+                }
             }}
         >
-            {props.text}
+            {text}
         </button>
     );
 }
