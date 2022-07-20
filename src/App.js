@@ -1,22 +1,20 @@
 import './App.css';
+import { useState } from "react";
 
 function App() {
+
+  const [counter, setCounter] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <button className={`${counter === 0 ? "d-none" : ""}`}
+        onClick={() => { setCounter(counter - 1); }} >
+        -
+      </button>
+      <p>Counter: {counter}</p>
+      <button className={`${counter === 10 ? "d-none" : ""}`}
+        onClick={() => { setCounter(counter + 1); }} >+</button>
+    </div >
   );
 }
 
