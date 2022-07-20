@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from "react";
+import Button from './components/button/Button';
 
 function App() {
 
@@ -7,17 +8,21 @@ function App() {
 
   return (
     <div className="App">
-      <button className={`${counter === 0 ? "d-none" : ""}`}
-        onClick={() => { setCounter(counter - 1); }} >
-        -
-      </button>
+      <Button className={`${counter === 0 ? "d-none" : ""}`}
+        counter={counter}
+        setCounter={setCounter}
+        text="-"
+      />
       <p>Counter: {counter}</p>
-      <button className={`${counter === 10 ? "d-none" : ""}`}
-        onClick={() => { setCounter(counter + 1); }} >
-        +</button>
+      <Button className={`${counter === 10 ? "d-none" : ""}`}
+        counter={counter}
+        setCounter={setCounter}
+        text="+"
+      />
       <br />
       <br />
-      <button onClick={() => { setCounter(0); }}>Reset</button>
+      {/* <button onClick={() => { setCounter(0); }}>Reset</button> */}
+
     </div >
   );
 }
