@@ -25,9 +25,6 @@ function App() {
         {counter === 0 ? '' : buttonMinus}
         <p>Counter: {counter}</p>
         {counter === 10 ? '' : buttonPlus}
-
-        {/* {buttonPlus}
-        {buttonMinus} */}
         <br />
         <br />
         <Button
@@ -36,10 +33,6 @@ function App() {
           text="Reset"
         />
       </div>
-      {/* <hr />
-      <div>
-        <h1>Ready to Go</h1>
-      </div> */}
     </div >
   );
 }
