@@ -21,7 +21,11 @@ function App() {
       />
       <br />
       <br />
-      {/* <button onClick={() => { setCounter(0); }}>Reset</button> */}
+      <Button
+        counter={counter}
+        setCounter={setCounter}
+        text="Reset"
+      />
 
     </div >
   );
